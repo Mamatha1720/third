@@ -87,28 +87,47 @@
 // // var titles=document.querySelectorAll('.title');
 // // console.log('titles');
 
-// var odd=document.querySelectorAll('li:nth-child(odd)');
-// var even=document.querySelectorAll('li:nth-child(even)');
-// for(var i=0; i<odd.length;i++)
-// {
-//     odd[i].style.backgroundColor='green';
-//     even[i].style.backgroundColor='aqua';
-// }
+// // var odd=document.querySelectorAll('li:nth-child(odd)');
+// // var even=document.querySelectorAll('li:nth-child(even)');
+// // for(var i=0; i<odd.length;i++)
+// // {
+// //     odd[i].style.backgroundColor='green';
+// //     even[i].style.backgroundColor='aqua';
+// // }
 
 
-// TRAVERSING THE DOM //
+// // TRAVERSING THE DOM //
 
-var itemList = document.querySelector('#items');
+// var itemList = document.querySelector('#items');
 
-// parentNode
+// // parentNode
 
- console.log(itemList.parentNode);
- itemList.parentNode.style.backgroundColor = '#f4f4f4';
- console.log(itemList.parentNode.parentNode.parentNode);
+//  console.log(itemList.parentNode);
+//  itemList.parentNode.style.backgroundColor = '#f4f4f4';
+//  console.log(itemList.parentNode.parentNode.parentNode);
 
-// parentElement
+// // parentElement
 
-console.log(itemList.parentElement);
-itemlist.parentElement.style.backgroundColor = '#f4f4f4';
-console.log(itemList.parentElement.parentElement.parentElement);
+// console.log(itemList.parentElement);
+// itemlist.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
 
+//Filter Items
+
+function filterItems (e){
+// convert text to lowercase
+var text = e.target.value.toLowerCase();
+// Get lis
+ var items = itemList.getElementsByTagName('li') ;
+ // Convert to an array
+Array.from(items).forEach(function(item)
+{ 
+var itemName = item.firstChild.textContent;
+if(itemName.toLowerCase().indexOf(text) != -1)
+{
+item.style.display = 'block';
+}
+else{
+    item.style.display = 'none';
+});
+}
