@@ -33,33 +33,64 @@ var header = document.getElementById('main-header');
 //header.style.border='solid 4px black';
 
 
-//GETELEMENTSBYVCLASSNAME
-var items=document.getElementsByClassName('list-group-item');
-console.log(items);
-console.log(items[1]);
+// //GETELEMENTSBYVCLASSNAME
+// var items=document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[1]);
 
-items[1].textContent='ITEM 2';
-items[1].style.backgroundColor='red';
+// items[1].textContent='ITEM 2';
+// items[1].style.backgroundColor='red';
 
 //items.stle.backgroundColor='yellow';
 
 
-for(var i=0;i<items.length;i++)
+// for(var i=0;i<items.length;i++)
+// {
+//     items[i].style.backgroundColor='teal';
+// }
+
+
+// //GETELEMENT BY TAG NAME
+// var li=document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].style.fontweight='bold';
+// li[1].textContent='Hello hi';
+// li[1].style.backgroundColor='red';
+
+// for(var i=0;i<li.length;i++)
+// {
+//     li[i].style.backgroundColor='grey';
+// }
+
+//QUERY SELECTOR//
+
+// var header=document.querySelector('#main-header');
+// header.style.borderbottom='solid 4px #ccc';
+
+var input= document.querySelector('input');
+input.value='hello world'
+
+var submit= document.querySelector('input[type="submit"]');
+submit.value="send"
+//  var item=document.querySelector('.list-group-item');
+//  item.style.color='red';
+
+ var lastItem=document.querySelector('.list-group-item:last-child');
+ lastItem.style.color='transparent';
+
+ var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+ secondItem.style. color='green';
+ 
+//QUERYSELECTORSALL
+
+// var titles=document.querySelectorAll('.title');
+// console.log('titles');
+
+var odd=document.querySelectorAll('li:nth-child(odd)');
+var even=document.querySelectorAll('li:nth-child(even)');
+for(var i=0; i<odd.length;i++)
 {
-    items[i].style.backgroundColor='teal';
+    odd[i].style.backgroundColor='green';
+    even[i].style.backgroundColor='aqua';
 }
-
-
-//GETELEMENT BY TAG NAME
-var li=document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-li[1].style.fontweight='bold';
-li[1].textContent='Hello hi';
-li[1].style.backgroundColor='red';
-
-for(var i=0;i<li.length;i++)
-{
-    li[i].style.backgroundColor='grey';
-}
-
