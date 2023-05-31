@@ -21,12 +21,25 @@
 
 // //GET ELEMENT BY ID
 
-console.log(document.getElementById('header-title'));
-var headerTitle = document.getElementById('header-title');
-var header = document.getElementById('main-header');
-console.log(headerTitle);
+// console.log(document.getElementById('header-title'));
+// var headerTitle = document.getElementById('header-title');
+// var header = document.getElementById('main-header');
+// console.log(headerTitle);
 //headerTitle.textContent='Hello';
 //headerTitle.innerText='goodbye';
 //headerTitle.innerHTML='<h3>hello</h3>';
-console.log(headerTitle.textContent);
-header.style.border='solid 3px black';
+// console.log(headerTitle.textContent);
+//header.style.border='solid 3px black';
+
+
+//GETELEMENTSBYVCLASSNAME
+var items=document.getElementsByClassName('list-group-item');
+console.log(items);
+//console.log(items[1]);
+//items[1].textContent='ITEM 2';
+ items[2].style.backgroundColor='green';
+// items.stle.backgroundColor='yellow';
+ for(var i=0;i<items.length;i++)
+ {
+   //items[i].style.backgroundColor='teal';
+ }
