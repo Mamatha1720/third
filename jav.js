@@ -67,28 +67,110 @@
 // var input= document.querySelector('input');
 // input.value='hello world'
 
-var submit= document.querySelector('input[type="submit"]');
-submit.value="SEND"
+// var submit= document.querySelector('input[type="submit"]');
+// submit.value="SEND"
 
 // var item=document.querySelector('.list-group-item');
 // item.style.color='red';
 
- var lastItem=document.querySelector('.list-group-item:last-child');
- lastItem.style.color='transparent';
+//  var lastItem=document.querySelector('.list-group-item:last-child');
+//  lastItem.style.color='transparent';
 
- var secondItem=document.querySelector('.list-group-item:nth-child(2)');
- secondItem.style.backgroundColor='green';
+//  var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+//  secondItem.style.backgroundColor='green';
  
 //QUERYSELECTORSALL
 
-var titles=document.querySelectorAll('.title');
-console.log('titles');
+// var titles=document.querySelectorAll('.title');
+// console.log('titles');
 
-var odd=document.querySelectorAll('li:nth-child(odd)');
-var even=document.querySelectorAll('li:nth-child(even)');
-for(var i=0; i<odd.length;i++)
-{
-    odd[i].style.backgroundColor='green';
-    even[i].style.backgroundColor='pink';
-}
+// var odd=document.querySelectorAll('li:nth-child(odd)');
+// var even=document.querySelectorAll('li:nth-child(even)');
+// for(var i=0; i<odd.length;i++)
+// {
+//     odd[i].style.backgroundColor='green';
+//     even[i].style.backgroundColor='pink';
+// }
+
+
+//Traversing thorugh the node
+var itemList= document.querySelector('#items');
+//parent node 
+//console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor='#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+//parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor='#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+//child node
+//console.log(itemList.childNodes);
+
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor='yellow';
+
+//firstchild
+// console.log(itemList.firstChild);
+// //firstelementchild
+
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent='hello 1';
+
+//lastchild
+//console.log(itemList.lastChild);
+//lastelementchild
+
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent='hello 4';
+
+//nextsibling
+//console.log(itemList.nextSibling);
+
+//nextElementsibling
+//console.log(itemList.nextElementSibling);
+
+//previousSibling
+//console.log(itemList.previousSibling);
+
+//previousElementSibling
+//console.log(itemList.previousElementSibling);
+//itemList.previousElementSibling.style.color='green';
+
+
+//createElement
+
+//craete a div
+ var newDiv = document.createElement('div');
+
+ // Add class
+ newDiv.className="hello";
+
+//Add id
+newDiv.id="hello 1";
+
+
+//Add attr
+newDiv.setAttribute('title','hello div');
+
+//create a text node
+var newDivText = document.createTextNode('Hello');
+
+//add text to div
+newDiv.appendChild(newDivText);
+
+var container= document.querySelector('header .container');
+//var container= document.querySelector('header .container');
+
+var h1=document.querySelector('header h1');
+//var h2=document.querySelector('header h2');
+
+console.log(newDiv);
+
+container.insertBefore(newDiv, h1);
+//container.insertAfter(newDiv, h1);
+
+
 
